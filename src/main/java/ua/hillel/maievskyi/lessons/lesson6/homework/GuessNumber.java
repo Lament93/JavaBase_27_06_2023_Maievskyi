@@ -34,10 +34,12 @@ public class GuessNumber {
                 break;
             } else if (inputNumber != randomNumber) {
                 attemptsCount = attemptsCount - 1;
-                System.out.println("Неправильна відповідь, у вас ще є " + attemptsCount + " спроб.");
+                System.out.println("Неправильна відповідь, у Вас ще є " + attemptsCount + " спроб.");
                 scanner.nextLine();
             }
         } while (attemptsCount > 0);
-        System.out.println("Ви не вгадали число, гру закінчено! Загадане число було: " + randomNumber);
+        if (inputNumber != randomNumber){
+            System.out.println("Ви не вгадали число, гру закінчено! Загадане число було: " + randomNumber);
+        }
     }
 }
